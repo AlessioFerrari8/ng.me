@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 
 @Component({
@@ -10,4 +10,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   styleUrl: './navbar.css',
 })
-export class Navbar {}
+export class Navbar {
+  
+}
