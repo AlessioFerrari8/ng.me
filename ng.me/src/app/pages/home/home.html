@@ -1,6 +1,7 @@
 <section class="min-h-screen flex flex-col items-center justify-start bg-slate-900 pt-16 px-6 pb-6 font-mono">
-  <div class="w-full max-w-2xl bg-slate-950/90 backdrop-blur-sm rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden border border-slate-700/50">
-    
+  <div
+    class="w-full max-w-2xl bg-slate-950/90 backdrop-blur-sm rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden border border-slate-700/50">
+
     <!-- Terminal Header -->
     <div class="bg-slate-800/50 px-4 py-3 flex items-center justify-between border-b border-slate-700/50">
       <div class="flex gap-2">
@@ -44,26 +45,71 @@
       </div>
       <div class="flex flex-col items-start gap-2">
         <span class="text-blue-400 italic">I'm a Junior Developer.
-          I love to make programs that do what I want, and I have a passion for learning new 
-          technologies and improving my skills. I'm always looking for new challenges and 
+          I love to make programs that do what I want, and I have a passion for learning new
+          technologies and improving my skills. I'm always looking for new challenges and
           opportunities to grow as a developer.
         </span>
         <span class="text-white italic">
-          I’m proficient in Java, C++, Javascript and Python — and I enjoy working across both backend and frontend stacks.
+          I’m proficient in Java, C++, Javascript and Python — and I enjoy working across both backend and frontend
+          stacks.
         </span>
         <span class="text-white italic">
           I love creating angular web-apps whenever I can.
         </span>
       </div>
+
+
+    </div>
+  </div>
+  <!-- Social Links Section -->
+  <div class="mt-12 flex flex-col items-center gap-6">
+    <p class="text-slate-300 text-lg uppercase tracking-widest font-sans">Find me on</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <!-- Instagram -->
+      <a href="https://instagram.com" target="_blank" class="group">
+        <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-xl hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </a>
+
+      <!-- Spotify -->
+      <a href="https://open.spotify.com/user/31t4qy7ua67qcucc7hkw477e2r6u?si=491349af87854994" target="_blank" class="group">
+        <div class="w-14 h-14 rounded-lg bg-green-500 flex items-center justify-center text-white text-xl hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300">
+          <i class="fa-brands fa-spotify"></i>
+        </div>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/AlessioFerrari8" target="_blank" class="group">
+        <div class="w-14 h-14 rounded-lg bg-gray-700 flex items-center justify-center text-white text-xl hover:shadow-lg hover:shadow-gray-500/50 transition-all duration-300">
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </a>
+
+      <!-- Telegram -->
+      <a href="https://telegram.org" target="_blank" class="group">
+        <div class="w-14 h-14 rounded-lg bg-sky-500 flex items-center justify-center text-white text-xl hover:shadow-lg hover:shadow-sky-500/50 transition-all duration-300">
+          <i class="fa-brands fa-telegram"></i>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
 
 <style>
   @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
   }
+
   .animate-pulse {
     animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
