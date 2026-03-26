@@ -50,8 +50,8 @@ export class Projects {
       fullDescription: 'Browser extension that allows you to save articles, blogs, and texts in a personal list. Access your saved content easily whenever you have time. Intuitive interface with cloud synchronization.',
       techStack: ['JavaScript', 'HTML', 'CSS', 'Browser API'],
       keyFeatures: ['Save Articles', 'Personal List', 'Synchronization', 'Intuitive Interface'],
-      demoLink: '#',
-      repoLink: '#'
+      demoLink: 'https://github.com/AlessioFerrari8/TO-READ/releases',
+      repoLink: 'https://github.com/AlessioFerrari8/TO-READ'
     },
     {
       id: 3,
@@ -69,13 +69,13 @@ export class Projects {
       id: 4,
       title: 'ng.me',
       shortDescription: 'Personal portfolio built with Angular showcasing skills, projects, and professional experience.',
-      image: 'https://via.placeholder.com/500x300?text=ng.me+Portfolio',
+      image: 'Gemini_Generated_Image_wk5zj2wk5zj2wk5z.png',
       category: 'Website',
       fullDescription: 'Professional personal portfolio built with Angular 19 in SSR. Complete showcase of skills, projects, and experience. Modern design with smooth animations and fully responsive across all devices.',
       techStack: ['Angular', 'TypeScript', 'Tailwind CSS', 'SSR'],
       keyFeatures: ['Responsive Design', 'Dark Mode', 'GitHub Integration', 'Smooth Animations'],
       demoLink: '#',
-      repoLink: '#'
+      repoLink: 'https://github.com/AlessioFerrari8/ng.me'
     }
   ];
 
