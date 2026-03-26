@@ -1,0 +1,156 @@
+<section class="min-h-screen flex flex-col bg-base-100 pt-16 px-6 pb-6 font-mono">
+  <!-- Main Container -->
+  <div class="w-full max-w-5xl mx-auto">
+    <!-- Terminal Section -->
+    <div class="w-full bg-slate-950/90 backdrop-blur-sm rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden border border-slate-700/50 mb-12">
+      
+      <!-- Terminal Header -->
+      <div class="bg-slate-800/50 px-2 md:px-4 py-2 md:py-3 flex items-center justify-between border-b border-slate-700/50">
+        <div class="flex gap-2">
+          <div class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#ff5f56] shadow-inner"></div>
+          <div class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#ffbd2e] shadow-inner"></div>
+          <div class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#27c93f] shadow-inner"></div>
+        </div>
+        <div class="text-slate-400 text-xs md:text-xs font-sans select-none">
+          <span class="md:hidden">bash — 40x12</span>
+          <span class="hidden md:inline">bash — 80x24</span>
+        </div>
+        <div class="w-8 md:w-12"></div>
+      </div>
+
+      <!-- Terminal Content -->
+      <div class="p-4 md:p-8 text-xs md:text-base leading-relaxed">
+        
+        <!-- About Me Command -->
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-emerald-400 font-bold">Fe32@ng.me</span>
+          <span class="text-slate-400">:</span>
+          <span class="text-blue-400 font-bold">~</span>
+          <span class="text-slate-200">$</span>
+          <span class="inline-flex items-center gap-0 ml-1">
+            <span class="text-white">cat about.txt</span>
+            <span class="w-2 h-5 bg-emerald-400 animate-pulse"></span>
+          </span>
+        </div>
+
+        <div class="mb-4">
+          <div class="text-emerald-400 font-bold text-lg md:text-xl mb-2">
+            Hi everyone! I'm Alessio Ferrari
+          </div>
+          <span class="text-blue-400 italic">
+            I'm a junior developer from Italy with a passion for creating functional and clean code. 
+            Currently focused on web development with a strong interest in both frontend and backend technologies.
+          </span>
+        </div>
+
+        <!-- Education Command -->
+        <div class="flex items-center gap-2 mb-2 mt-6">
+          <span class="text-emerald-400 font-bold">Fe32@ng.me</span>
+          <span class="text-slate-400">:</span>
+          <span class="text-blue-400 font-bold">~</span>
+          <span class="text-slate-200">$</span>
+          <span class="inline-flex items-center gap-0 ml-1">
+            <span class="text-white">education --info</span>
+            <span class="w-2 h-5 bg-emerald-400 animate-pulse"></span>
+          </span>
+        </div>
+
+        <div class="mb-4">
+          <span class="text-blue-400 italic">
+            Currently studying Computer Science, focused on software development and computer networks. 
+            Always learning new technologies and best practices in software engineering.
+          </span>
+        </div>
+
+        <!-- Interests Command -->
+        <div class="flex items-center gap-2 mb-2 mt-6">
+          <span class="text-emerald-400 font-bold">Fe32@ng.me</span>
+          <span class="text-slate-400">:</span>
+          <span class="text-blue-400 font-bold">~</span>
+          <span class="text-slate-200">$</span>
+          <span class="inline-flex items-center gap-0 ml-1">
+            <span class="text-white">ls -la interests/</span>
+            <span class="w-2 h-5 bg-emerald-400 animate-pulse"></span>
+          </span>
+        </div>
+
+        <div class="mb-4">
+          <div class="text-slate-300 ml-4 space-y-2">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-music text-emerald-400"></i>
+              <span>Listening to music</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-book text-blue-400"></i>
+              <span>Reading</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-dumbbell text-purple-400"></i>
+              <span>Playing sports</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GitHub Contributions Section -->
+    <div class="w-full mt-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-100 mb-8 text-center">GitHub <span class="text-emerald-400">Contributions</span></h2>
+      
+      <!-- GitHub Stats Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- GitHub Stats Card -->
+        <div class="bg-slate-950/90 border border-slate-700/50 rounded-lg p-4 flex justify-center">
+          <img 
+            src="https://github-readme-stats.vercel.app/api?username=AlessioFerrari8&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1e293b&border_color=334155&icon_color=10b981&title_color=e0e7ff&text_color=cbd5e1" 
+            alt="GitHub Stats"
+            class="w-full"
+          />
+        </div>
+
+        <!-- Most Used Languages Card -->
+        <div class="bg-slate-950/90 border border-slate-700/50 rounded-lg p-4 flex justify-center">
+          <img 
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=AlessioFerrari8&layout=compact&theme=tokyonight&hide_border=true&bg_color=1e293b&border_color=334155&title_color=e0e7ff&text_color=cbd5e1" 
+            alt="Top Languages"
+            class="w-full"
+          />
+        </div>
+      </div>
+
+      <!-- GitHub Contributions Heatmap -->
+      <div class="mt-12 pt-8 border-t border-slate-600/30">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-lg md:text-xl font-bold text-slate-100">Contribution Heatmap</h3>
+          <span class="text-xs text-emerald-400 font-mono">Last 12 months</span>
+        </div>
+        <div class="bg-gradient-to-b from-slate-800/40 to-slate-900/40 border-2 border-emerald-500/30 rounded-xl p-8 flex justify-center overflow-x-auto shadow-[0_10px_40px_rgba(16,185,129,0.1)] hover:shadow-[0_10px_40px_rgba(16,185,129,0.2)] transition-shadow duration-300">
+          <img 
+            src="https://ghchart.rshah.org/239a3b/AlessioFerrari8" 
+            alt="GitHub Contributions Heatmap" 
+            class="w-full min-w-max"
+          />
+        </div>
+      </div>
+
+      <!-- GitHub Links -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        <div class="bg-slate-950/90 border border-slate-700/50 rounded-lg p-4 flex items-center justify-between hover:border-emerald-500/50 transition">
+          <span class="text-slate-300">Check my GitHub</span>
+          <a href="https://github.com/AlessioFerrari8" target="_blank" class="text-emerald-400 font-bold hover:text-emerald-300">
+            <i class="fa-brands fa-github mr-2"></i>Visit Profile
+          </a>
+        </div>
+        
+        <div class="bg-slate-950/90 border border-slate-700/50 rounded-lg p-4 flex items-center justify-between hover:border-emerald-500/50 transition">
+          <span class="text-slate-300">Follow for updates</span>
+          <a href="https://github.com/AlessioFerrari8" target="_blank" class="text-emerald-400 font-bold hover:text-emerald-300">
+            <i class="fa-solid fa-star mr-2"></i>Star
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
