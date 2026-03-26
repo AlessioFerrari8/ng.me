@@ -1,1 +1,159 @@
-<p>projects works!</p>
+<!-- Projects Display Section -->
+<div class="w-full px-6 py-12">  
+  <!-- Projects Grid Layout -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+    <!-- Project 1 Card: Pokemon Manager -->
+    <div class="bg-slate-900/50 border border-slate-700/30 rounded-2xl overflow-hidden hover:border-blue-500/50 transition group">
+      <!-- Project Image -->
+      <div class="relative h-64 bg-slate-950 flex items-center justify-center overflow-hidden">
+        <img src="Screenshot From 2026-03-26 18-11-26.png" alt="Pokemon Manager" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition">
+        <div class="absolute top-4 left-4">
+          <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs border border-cyan-500/50">Website</span>
+        </div>
+      </div>
+      
+      <!-- Project Info -->
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-slate-100 mb-2">Pokemon Manager</h3>
+        <p class="text-slate-400 text-sm mb-4">A web application for Pokémon Pocket players. Browse the full card catalog, track your missing cards by expansion, build decks, and manage your profile.</p>
+        <button (click)="openModal(projects[0])" class="text-cyan-400 text-sm hover:text-cyan-300 transition cursor-pointer bg-none border-none p-0">Click for further details →</button>
+      </div>
+    </div>
+
+    <!-- Project 2 Card: TO-READ Extension -->
+    <div class="bg-slate-900/50 border border-slate-700/30 rounded-2xl overflow-hidden hover:border-blue-500/50 transition group">
+      <!-- Project Image -->
+      <div class="relative h-64 bg-slate-950 flex items-center justify-center overflow-hidden">
+        <img src="Schermata da 2026-02-18 12-06-34.webp" alt="TO-READ" class="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition">
+        <div class="absolute top-4 left-4">
+          <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs border border-cyan-500/50">Extension</span>
+        </div>
+      </div>
+      
+      <!-- Project Info -->
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-cyan-400 mb-2">TO-READ</h3>
+        <p class="text-slate-400 text-sm mb-4">Simple extension that allows you to put some blogs, texts and so on in a list so you can access them easily when you have time.</p>
+        <button (click)="openModal(projects[1])" class="text-cyan-400 text-sm hover:text-cyan-300 transition cursor-pointer bg-none border-none p-0">Click for details →</button>
+      </div>
+    </div>
+
+    <!-- Project 3 Card: VinylBot Discord -->
+    <div class="bg-slate-900/50 border border-slate-700/30 rounded-2xl overflow-hidden hover:border-blue-500/50 transition group">
+      <!-- Project Image -->
+      <div class="relative h-64 bg-slate-950 flex items-center justify-center overflow-hidden">
+        <img src="Gemini_Generated_Image_4ha7gj4ha7gj4ha7.png" alt="VinylBot" class="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition">
+        <div class="absolute top-4 left-4">
+          <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs border border-cyan-500/50">GitHub</span>
+        </div>
+      </div>
+      
+      <!-- Project Info -->
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-slate-100 mb-2">VinylBot</h3>
+        <p class="text-slate-400 text-sm mb-4">A bot for discord. The bot plays 15 seconds of a song, and whoever writes the title first in chat wins points. Server leaderboard, streak, and badges.</p>
+        <button (click)="openModal(projects[2])" class="text-cyan-400 text-sm hover:text-cyan-300 transition cursor-pointer bg-none border-none p-0">Click for details →</button>
+      </div>
+    </div>
+
+    <!-- Project 4 Card: ng.me Portfolio -->
+    <div class="bg-slate-900/50 border border-slate-700/30 rounded-2xl overflow-hidden hover:border-blue-500/50 transition group">
+      <!-- Project Image -->
+      <div class="relative h-64 bg-slate-950 flex items-center justify-center overflow-hidden">
+        <img src="https://via.placeholder.com/500x300?text=ng.me+Portfolio" alt="Portfolio" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition">
+        <div class="absolute top-4 left-4">
+          <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs border border-cyan-500/50">Website</span>
+        </div>
+      </div>
+      
+      <!-- Project Info -->
+      <div class="p-6">
+        <h3 class="text-2xl font-bold text-slate-100 mb-2">ng.me</h3>
+        <p class="text-slate-400 text-sm mb-4">Personal portfolio built with Angular that showcases skills, projects, and professional experience.</p>
+        <button (click)="openModal(projects[3])" class="text-cyan-400 text-sm hover:text-cyan-300 transition cursor-pointer bg-none border-none p-0">Click for details →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal Overlay Background -->
+<div *ngIf="isModalOpen" (click)="closeModal()" class="fixed inset-0 bg-black/80 z-40 backdrop-blur-sm"></div>
+
+<!-- Project Details Modal -->
+<div *ngIf="isModalOpen && selectedProject" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+  <div class="bg-slate-950/95 border border-slate-700/50 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+    
+    <!-- Modal Close Button -->
+    <button (click)="closeModal()" class="absolute top-4 right-4 z-10 text-slate-400 hover:text-white transition text-2xl bg-none border-none cursor-pointer">
+      ✕
+    </button>
+
+    <!-- Modal Header with Project Image -->
+    <div class="relative h-80 bg-slate-950 flex items-center justify-center overflow-hidden">
+      <img *ngIf="selectedProject.image.startsWith('http')" [src]="selectedProject.image" [alt]="selectedProject.title" class="w-full h-full object-cover opacity-50">
+      <img *ngIf="!selectedProject.image.startsWith('http')" [src]="selectedProject.image" [alt]="selectedProject.title" class="w-full h-full object-contain opacity-50">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+      
+      <div class="absolute bottom-8 left-8 right-8">
+        <div class="mb-4">
+          <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs border border-cyan-500/50">{{ selectedProject.category }}</span>
+        </div>
+        <h2 class="text-4xl font-bold text-white">{{ selectedProject.title }}</h2>
+      </div>
+    </div>
+
+    <!-- Modal Body Content -->
+    <div class="p-8">
+      <!-- Project Description Section -->
+      <div class="mb-8">
+        <h3 class="text-xl font-bold text-slate-100 mb-4">Project Description</h3>
+        <p class="text-slate-400 leading-relaxed">{{ selectedProject.fullDescription }}</p>
+      </div>
+
+      <!-- Features and Technology Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <!-- Key Features -->
+        <div>
+          <h3 class="text-lg font-bold text-slate-100 mb-4">Key Features</h3>
+          <ul class="space-y-3">
+            <li *ngFor="let feature of selectedProject.keyFeatures" class="flex items-center gap-3">
+              <span class="text-emerald-400">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span class="text-slate-300">{{ feature }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Technology Tags List -->
+        <div>
+          <h3 class="text-lg font-bold text-slate-100 mb-4">TECH STACK</h3>
+          <div class="flex flex-wrap gap-2">
+            <span *ngFor="let tech of selectedProject.techStack" class="bg-slate-800/50 border border-slate-700 text-slate-300 px-3 py-1 rounded text-sm">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <!-- Live Demo Link -->
+        <a *ngIf="selectedProject.demoLink !== '#'" [href]="selectedProject.demoLink" target="_blank" class="flex-1 bg-white text-black font-bold py-2 px-4 rounded-lg hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>Live Demo
+        </a>
+        <!-- Private Repository Indicator -->
+        <button *ngIf="selectedProject.demoLink === '#'" disabled class="flex-1 bg-slate-700 text-slate-400 font-bold py-2 px-4 rounded-lg cursor-not-allowed text-center">
+          <i class="fa-solid fa-lock mr-2"></i>Private Repository
+        </button>
+
+        <!-- GitHub Repository Link -->
+        <a *ngIf="selectedProject.repoLink && selectedProject.repoLink !== '#'" [href]="selectedProject.repoLink" target="_blank" class="flex-1 bg-slate-800 border border-slate-600 text-slate-300 font-bold py-2 px-4 rounded-lg hover:border-emerald-500 hover:text-emerald-400 transition text-center">
+          <i class="fa-brands fa-github mr-2"></i>GitHub Repo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
