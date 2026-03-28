@@ -95,7 +95,3 @@ npm test
 This project is configured for deployment on **Vercel**. The `vercel.json` configuration handles automatic builds and deployments.
 
 Find it in https://ngme-deploy.vercel.app/home
-
-## 📄 License
-
-This project is private. All rights reserved.
