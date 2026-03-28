@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd ng.me && npm install --legacy-peer-deps && npm run build",
+  "outputDirectory": "ng.me/dist/ng.me/browser",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
